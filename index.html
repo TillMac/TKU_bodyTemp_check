@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>體溫實名制填報</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/60f4f259a7.js"></script>
+    <style>
+        .row {margin-top: 80px;}
+    </style>
+</head>
+<body class="bg-light">
+    <header>
+
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="index.cshtml">體溫實名制填報</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                    <ul class="navbar-nav mr-auto">
+                        
+                    </ul>
+                    <span class="text-right text-white">
+                            <a class="text-white" href="logout.cshtml"><i class="fa  fa-user" aria-hidden="true"></i> 407620623 登出</a>
+                    </span>
+                    
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container" id="logo">
+        <div class="text-center">
+            <img id="pc_head" class="img-thumbnail" src="images/head_0.jpg" alt="">
+            
+
+
+            
+
+            <p style="clear:both"></p>
+            
+        </div>
+        
+
+
+
+<div class="row" id="divcnt">
+
+    <div class="col-md-12 order-md-1">
+        
+        <form class="needs-validation" novalidate method="post" action="" id="form1">
+            <div class="mb-3 h2 text-center">
+                <span class="text-primary">商管大樓</span>
+            </div>
+
+                <input type="hidden" name="actpps" id="actpps" value="" />
+                        <div class="mb-3">
+                            <h3 class="text-success text-center" style="font-size:144px">
+                                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                            </h3>
+
+                        </div>
+                        <div class="mb-3 text-center h2">
+                            <label><span class="text-primary" id="change">03-14 15:36</span></label>
+                            <script type="text/javascript">
+                                var today = new Date();
+                                var month = today.getMonth()+1;
+                                var date = today.getDate();
+                                var hour = today.getHours();
+                                var minute = today.getMinutes();
+                                document.getElementById("change").textContent="0"+month+"-"+date+" "+hour+":"+minute;
+                            </script>
+
+                        </div>
+                        <div class="mb-3 text-center h1" id="dvisec">
+
+                        </div>
+                        <script type='text/javascript'>
+                            var i = 100;
+                            var interval = setInterval(function () {
+
+                                $("#dvisec").text(i);
+                                i = i - 1;
+                                if (i == 0) {
+                                    //clearInterval(interval);
+                                    //alert("end");
+                                    $("#dvisec").addClass("text-danger");;
+                                }
+                            }, 600);
+                        </script>
+                        <p class="text-success">407620623 孫　宇 , 您已完成填報體溫作業，感謝您對淡江防疫的支持。</p>
+
+
+
+            <hr class="mb-4">
+            
+            <div class="validation-summary-valid" data-valmsg-summary="true"><ul>
+</ul></div>
+            <input name="__RequestVerificationToken" type="hidden" value="XKhIiDyfBOoPs63iySVqqzxKsQzwr92IClAJTQPBQVuKhXC4agA1Kc50C1geDERw2ifurwfdqXXNfpUqtgO_LNv8dmY1" />
+        </form>
+    </div>
+</div>
+
+
+
+        <p id="mb_desc" class="lead mt-3">
+            請務必每日誠實填寫紀錄，如因隱匿而造成日後防疫破口，將追究責任。
+
+        </p>
+        <p id="mb_tobtm" class="lead">請每日量測體溫，並上網填報<a href="https://sso.tku.edu.tw/oisivp/ncp1082_notify/health_list" target="_blank">自主健康監測回報系統</a></p>
+        <p class="pull-right">
+            <a class="btn btn-info" href="chlang.cshtml"> <i class="fa fa-globe" aria-hidden="true"></i> English</a>
+        </p>
+    </div>
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">&copy; 2020 <a href="http://www.tku.edu.tw/" target="_blank">淡江大學</a> <a href="http://www.ipc.tku.edu.tw/" target="_blank">資訊處</a></p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="http://www.tku.edu.tw/pdp.asp" target="_blank">個資政策</a></li>
+            <li class="list-inline-item"><a href="http://www.tku.edu.tw/privacy.asp" target="_blank">隱私權政策</a></li>
+            <li class="list-inline-item"><a href="http://www.tku.edu.tw/notify.asp" target="_blank">個人資料告知聲明</a></li>
+            
+            
+            <li>個資保護聯絡窗口：資訊處服務台</li>
+        </ul>
+    </footer>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="Scripts/bootstrap.bundle.min.js"></script>
+
+    <!-- Select2 -->
+    <script src="//select2.github.io/select2/select2-3.4.1/select2.js"></script>
+    <script>
+        $('.select2').select2({ placeholder: '' });
+    </script>
+    <script src="Scripts/form-validation.js"></script>
+    
+    <!-- jquery-loading v1.3.0 -->
+    <link href="https://cdn.jsdelivr.net/npm/jquery-easy-loading@1.3.0/dist/jquery.loading.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery-easy-loading@1.3.0/dist/jquery.loading.min.js"></script>
+    <script>
+        //$('body').loading({
+        //    stoppable: true
+        //});
+        function confirmSubmit() {
+
+
+            var agree = confirm("Are you sure ?");
+            if (agree) {
+                return true;
+            }
+            else
+                return false;
+        }
+
+        function loading() {
+            $("#divcnt").loading(); // 開始
+            //alert('');
+            return true;
+        }
+        function close_window() {
+            if (confirm("Close Window?")) {
+                //close();
+
+                var userAgent = navigator.userAgent;
+                if (userAgent.indexOf("Firefox") != -1
+                    || userAgent.indexOf("Chrome") != -1) {
+                    close();//直接呼叫JQUERY close方法關閉
+                } else {
+                    window.opener = null;
+                    window.open("", "_self");
+                    window.close();
+                }
+            }
+        }
+
+        $(document).ready(function () {
+            $("#btnOpenBadArea").click(function () {
+                $("#divBtBad").toggle();
+                $("#btnOpenBadArea").toggle();
+            }
+            );
+        });
+
+    </script>
+
+
+</body>
+</html>
+
+
